@@ -1,0 +1,20 @@
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+composer.phar
+
+# Map files
+/public/css/*.map
+/public/js/*.map
+
+# Helpers
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+/config/debugbar.php
+/config/ide-helper.php
