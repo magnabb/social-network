@@ -7,14 +7,15 @@
     "require": {
         "php": ">=5.6.4",
         "doctrine/dbal": "^2.5",
-        "laravel/framework": "5.3.*"
+        "laravel/framework": "5.3.*",
+        "roave/security-advisories": "dev-master"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^2.3",
         "barryvdh/laravel-ide-helper": "^2.3",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.0",
+        "phpunit/phpunit": "~6.0",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*"
     },

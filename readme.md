@@ -13,3 +13,5 @@
 4. Создать базу данных и выполнить команду `php artisan migrate`
 6. Установить необходимые npm пакеты: `npm install`
 8. Собрать css и js: `gulp`
+
+(с) https://www.youtube.com/playlist?list=PLZAiN3wmUtzV1eI7mAxERQaE2LkyA5Nh6

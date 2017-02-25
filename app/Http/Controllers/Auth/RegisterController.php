@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
+use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -51,9 +51,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'     => 'required|max:255',
+            'name'     => 'required|max:255|unique:users',
             'email'    => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'gender'   => 'required|bool',
         ]);
     }
 
@@ -66,10 +67,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $avatar = 'public/defaults/avatars/' . ($data['gender'] ? 'user-male-icon.png' : 'user-female-icon.png');
         return User::create([
             'name'     => $data['name'],
             'email'    => $data['email'],
+            'gender'   => $data['gender'],
             'password' => bcrypt($data['password']),
+            'slug'     => str_slug($data['name']),
+            'avatar'   => $avatar,
         ]);
     }
 }
