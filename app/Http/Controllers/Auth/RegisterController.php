@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 namespace App\Http\Controllers\Auth;
 
@@ -67,9 +67,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name'     => $data['name'],
-            'email'    => $data['email'],
-            'password' => bcrypt($data['password']),
+            'name'     => $data[ 'name' ],
+            'email'    => $data[ 'email' ],
+            'password' => bcrypt($data[ 'password' ]),
         ]);
     }
 }
