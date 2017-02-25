@@ -1,0 +1,23 @@
+language: php
+
+sudo: false
+
+git:
+    depth: 1
+
+env:
+    global:
+        - MIN_PHP=5.5.9
+
+php:
+    - 7.0.1
+
+before_script:
+  - composer self-update
+  - composer update --prefer-dist --no-interaction --dev
+
+script: phpunit
+
+notifications:
+  email:
+    -  baz.prooduction@gmail.com
